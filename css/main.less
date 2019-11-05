@@ -797,7 +797,7 @@ header{
         color: #FFFFFF;
         margin-bottom: 25px;
         display: -webkit-box;
-        max-height: 2.5rem;
+        height: 2.5rem;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -898,6 +898,7 @@ html{
   padding: 12px 50px 12px 15px;
   line-height: 1;
   text-decoration: none;
+
   &:hover, &:focus{
     color: @red;
     border: 1px solid @red;
@@ -917,6 +918,12 @@ html{
     height: 16px;
     .transition(@transition_default);
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='16' viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.7322 15.3406C14.4279 15.645 13.9487 15.645 13.6444 15.3406C13.3503 15.0465 13.3503 14.5571 13.6444 14.2637L19.1605 8.74763L0.958114 8.74763C0.5338 8.74763 0.185575 8.41037 0.185575 7.98606C0.185575 7.56174 0.533799 7.21352 0.958114 7.21352L19.1605 7.21351L13.6444 1.70771C13.3503 1.40335 13.3503 0.913234 13.6444 0.619846C13.9487 0.315491 14.4279 0.315491 14.7322 0.619846L21.5542 7.44178C21.8482 7.73585 21.8482 8.22529 21.5542 8.51868L14.7322 15.3406Z' fill='%2327282E' fill-opacity='1'/%3e%3c/svg%3e ");
+  }
+
+  &.down{
+    &:before{
+      .transform(rotate(90deg));
+    }
   }
 
 }
@@ -1064,10 +1071,7 @@ footer{
 
 
 
-.page_content{
-  padding-top: 12px;
-  padding-bottom: 90px;
-}
+
 
 
 .breadcrumb{
@@ -1195,3 +1199,32 @@ a[data-fancybox]{
 }
 
 
+.page_content{
+  padding-top: 12px;
+  padding-bottom: 70px;
+  @media (max-width:1200px){
+    padding-bottom: 60px;
+  }
+  @media (max-width:767px){
+    padding-bottom:40px;
+  }
+  .serv_list{
+    >div{
+      margin-bottom: 30px;
+      @media (max-width:767px){
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+.gallery_list{
+  @media (min-width:1200px){
+    margin-top: 60px;
+  }
+  > div{
+    margin-bottom: 30px;
+  }
+}
