@@ -66,6 +66,112 @@ $(document).ready(function(){
     });
 
 
+    if($('.reviews_slider > div').length >4){
+        $('.reviews_slider').slick({
+            slidesToShow:4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots:false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    $('.r_prev').click(function(){
+        $('.reviews_slider').slick('slickPrev');
+    });
+    $('.r_next').click(function(){
+        $('.reviews_slider').slick('slickNext');
+    });
+
+
+    if($('.certificates_slider > div').length >4){
+        $('.certificates_slider').slick({
+            slidesToShow:4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots:false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    $('.s_prev').click(function(){
+        $('.certificates_slider').slick('slickPrev');
+    });
+    $('.s_next').click(function(){
+        $('.certificates_slider').slick('slickNext');
+    });
+
+
+
+    if($('.technique_slider > div').length >3){
+        $('.technique_slider').slick({
+            slidesToShow:3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots:false,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    $('.t_prev').click(function(){
+        $('.technique_slider').slick('slickPrev');
+    });
+    $('.t_next').click(function(){
+        $('.technique_slider').slick('slickNext');
+    });
+
+
     /*
     $('.search_toggler').on('click',function () {
         $(this).toggleClass('act');
