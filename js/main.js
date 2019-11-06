@@ -172,6 +172,45 @@ $(document).ready(function(){
     });
 
 
+
+
+
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [53.959762,27.633733],
+                zoom:16,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                balloonContent: 'Республика Беларусь, 223053 Минский р-н, пересечение Логойского тр. и МКАД' +
+                'административное зд., каб. 209'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/map_icon.svg',
+                // Размеры метки.
+                iconImageSize: [45, 57],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-10, -60]
+            });
+
+        myMap.geoObjects
+            .add(myPlacemark)
+            .add(myPlacemarkWithContent);
+    });
+
+
+
     /*
     $('.search_toggler').on('click',function () {
         $(this).toggleClass('act');
