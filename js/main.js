@@ -189,7 +189,7 @@ $(document).ready(function(){
                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
             ),
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                balloonContent: 'Республика Беларусь, 223053 Минский р-н, пересечение Логойского тр. и МКАД' +
+                balloonContent: 'Республика Беларусь, 223053 Минский р-н, пересечение Логойского тр. и МКАД, ' +
                 'административное зд., каб. 209'
             }, {
                 // Опции.

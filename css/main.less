@@ -1422,3 +1422,42 @@ a[data-fancybox]{
     }
   }
 }
+
+
+
+.search_results{
+  >div{
+    margin-bottom: 20px;
+  }
+  .item{
+    > a{
+      text-decoration: none;
+    }
+    h3{
+      color: @black;
+    }
+  }
+}
+
+
+
+
+.content{
+  ul{
+    li{
+      position: relative;
+      padding-left: 15px;
+      &:before{
+        .b_a();
+        width: 5px;
+        height: 5px;
+        .border-radius(50%);
+        background: @red;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+}
